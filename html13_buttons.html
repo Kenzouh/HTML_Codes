@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>HTML Buttons</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML Buttons and JavaScript">
+    <meta name="keywords" content="HTML Buttons, HTML, Buttons, JavaScript, Pokemon, Dragon, Dragon Types">
+    <meta name="author" content="Kenzo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="60">
+</head>
+
+<body>
+<center>
+    <h1 style="color: #f87373">~~ Buttons ~~</h1>
+
+    <a href="https://www.youtube.com/watch?v=lpiB2wMc49g" target="_blank">
+    <button style="background-color: #fff200; border-radius: 5px">Click me!</button>
+    <button style="border-radius: 5px" disabled>Disabled/Unclickable Button</button>
+    </a>
+
+    <br>
+
+    <h2 style="color:#005467">My Favorite Dragon Type Pokemon!</h2>
+
+
+                <!--Name of the function-->
+    <button onclick="func1()" style="background-color: #c0ca00; border-radius: 5px">1st</button>
+    <button onclick="func2()" style="background-color: #6a6ad2; border-radius: 5px">2nd</button>
+    <button onclick="func3()" style="background-color: #aedaed; border-radius: 5px">3rd</button>
+    <button onclick="func4()" style="background-color: #7ea5ff; border-radius: 5px">4th</button>
+    <button onclick="func5()" style="background-color: #ffb1f6; border-radius: 5px">5th</button>
+    <button onclick="func6()" style="background-color: #8f8f8f; border-radius: 5px">6th</button>
+
+        <!--id of our paragraph element-->
+    <p id="testing">Click any button above! :D</p>
+
+    <!--script tags = JavaScript program-->
+    <script>
+        function func1(){
+            document.getElementById("testing").innerHTML = "Dragonite";
+        }
+        function func2(){
+            document.getElementById("testing").innerHTML = "Garchomp";
+        }
+        function func3(){
+            document.getElementById("testing").innerHTML = "Kyurem";
+        }
+        function func4(){
+            document.getElementById("testing").innerHTML = "Dialga";
+        }
+        function func5(){
+            document.getElementById("testing").innerHTML = "Palkia";
+        }
+        function func6(){
+            document.getElementById("testing").innerHTML = "Giratina";
+        }
+    </script>
+</center>
+</body>
+</html>
