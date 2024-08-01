@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>HTML Forms</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML Forms is a topic about taking user-inputs">
+    <meta name="keywords" content="HTML, HTML Forms, Forms">
+    <meta name="author" content="Kenzo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="60">
+</head>
+
+<body>
+    <center>
+    <p style="color:#390068; font-size: 50px">DUMMY PAYMENT SECTION WEBSITE</p>
+    </center>
+    <!--Form tags-->
+
+             <!--Action attribute: delivers user input to a page. Ex.: delivering to a PHP page-->
+
+                              <!--Method attribute: gets (insecure): appends data to the URL of your webpage
+                                                    posts (secure): submits secure info. (NEEDED A SET UP SERVER)-->
+    <form action="action_page.php" method="POST">
+        
+        <div>
+            <!--Good practice to include "for" attribute-->
+            <label for="fname">First Name:</label> <!-- Label tags-->
+
+            <!-- attributes: type, id, name (similar to a variable), placeholder | Import elements: text -->
+            <input type="text" id="fname" name="fname" placeholder="Satoshi" required>
+                                                        <!--Required boolean attribute: required to fill out forms
+                                                                             which have required attribute-->
+        </div>
+        
+        <br>
+
+        <div> <!-- Unique ID-->
+            <label for="lname">Last Name:</label>
+
+            <input type="text" id="lname" name="lname" placeholder="Tajiri" required>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="pass">Password:</label>
+            <!--Password fields: censors inputted texts         max 12 chars only--> 
+            <input type="password" id="pass" name="pass" maxlength="12" required>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="email">Email:</label>
+            <!--Email field: Needs an @ character-->
+            <input type="email" id="email" name="email" placeholder="SatoshiTajiri@gmail.com" required>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="phone">Phone #:</label>
+
+            <input type="tel" id="phone" name="phone" placeholder="(123)-456-7890" required>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="bdate">Birthdate:</label>
+            <!-- type date: includes interactable calendar-->
+            <input type="date" id="bdate" name="bdate">
+        </div>
+
+        <br>
+ 
+        <div>
+            <label for="quantity">Quantity:</label>
+                <!-- type number: lets the user type numbers-->
+                                <!-- min = to prevent negative nos.  value = default-->
+            <input type="number" id="quantity" name="quantity" min="0" max="99" value="1" required>
+        </div>
+
+        <br>
+        
+        <div>
+            <!-- Radio buttons-->
+            <label for="title">Title:</label>
+
+            <label for="Mr.">Mr.</label> <!--Same names to group them (so user can choose 1 only)-->
+            <input type="radio" id="Mr." name="title" value="Mr.">
+
+            <label for="Ms.">Ms.</label>
+            <input type="radio" id="Ms." name="title" value="Ms.">
+
+            <label for="Mrs.">Mrs.</label>
+            <input type="radio" id="Mrs." name="title" value="Mrs.">
+
+            <label for="PhD.">PhD.</label>
+            <input type="radio" id="PhD." name="title" value="PhD.">
+
+            <label for="Engr.">Engr.</label>
+            <input type="radio" id="Engr." name="title" value="Engr.">
+            
+            <label for="WRNS">Would Rather Not Say</label>
+            <input type="radio" id="WRNS" name="title" value="WRNS">
+        </div>
+
+        <br>
+
+        <div>
+            <label for="payment">Payment:</label>
+            <!--Select tags: drop down menu selection-->
+            <select id="payment" name="payment">
+                <!--Options within the select element-->
+                <option value="creditcard">Credit Card</option>
+                <option value="debitcard">Debit Card</option>
+                <option value="giftcard">Gift Card</option>
+                <option value="visa">Visa</option>
+            </select>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="loyal">Loyal Customer:</label>
+            <!--Checkbox: Gives you a checkbox-->
+            <input type="checkbox" id="loyal" name="loyal">
+        </div>
+
+        <br>
+
+        <div>
+            <!--Built-in button-->
+            <input type="reset">
+        </div>
+
+        <br>
+
+        <div>
+            <input type="submit">
+        </div>
+
+    </form>
+
+</body>
+</html>
