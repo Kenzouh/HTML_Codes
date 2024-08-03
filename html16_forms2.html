@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang=en>
+
+<head>
+    <title>Forms (2.0)</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML forms but a better version than the previous one I coded">
+    <meta name="keywords" content="HTML Forms, HTML, Forms">
+    <meta name="author" content="Kenzo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--meta http-equiv="refresh" content="60"-->
+
+    <!--This tells IE to render the web page using the IE9 rendering engine.-->
+    <!--ensures that IE uses the latest available rendering engine to render 
+    a web page, helping to ensure compatibility with modern web standards and features.-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+
+    <link rel="icon" type="image/jpg" href="favicon.jpg">
+</head>
+
+<body>
+
+    <p style="font-size: 50px; color: #270568; text-align: center;">Dummy Forms (2.0)</p>
+
+                <!--Back-end language, where we want to send the form to-->
+                                    <!--POST request = confidential info-->
+                                    <!--GET request = insensitive data-->
+
+                    <!--Image is a large file so we need encryption type-->
+                    <!--enctype="multipart/form-data" = this will break a large amount of data to multiple parts, 
+                                                        then when that data is received, those small parts will
+                                                         be  reassembled to its original size-->
+    <form action="index.php" method="POST" enctype="multipart/form-data">
+        <!--for attribute = when you click the label, your cursor will be moved to the 
+                            text box as long as the ID is the same as 
+                            the for attribute's-->
+        <label for="username">Username:</label>
+        <input type="text" id="username" minlength="3" maxlength="15" placeholder="Kenzo"><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" minlength="3" maxlength="15"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="kentakada@gmail.com"><br><br>
+
+        <label for="phone">Phone #:</label>                <!--     0-9: nos. that can be inputted. 
+                                                                    {3}{3}{4}: number division before hyphen 
+                                                                    Pattern: Limits the format.-->
+        <input type="tel" id="phone" placeholder="0913-543-6321" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"><br><br>
+
+        <label for="birthdate">Birthdate:</label>
+        <input type="date" id="birthdate"><br><br>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" min="0" max="99" value="1"><br><br>
+
+        <!--================================================================-->
+        <label for="title">Title:</label>
+
+        <label for="Mr.">Mr.</label>
+        <input type="radio" id="Mr." name="title" value="Mr.">
+
+        <label for="Ms.">Ms.</label>
+        <input type="radio" id="Ms." name="title" value="Ms.">
+
+        <label for="Mrs.">Mrs.</label>
+        <input type="radio" id="Mrs." name="title" value="Mrs.">
+
+        <label for="Dr.">Dr.</label>
+        <input type="radio" id="Dr." name="title" value="Dr.">
+
+        <label for="WRNS">Would Rather Not Say</label>
+        <input type="radio" id="WRNS" name="title" value="WRNS"><br><br>
+        <!--================================================================-->
+
+        <label for="payment">Payment:</label>
+        <select id="payment">
+            <option value="visa">Visa</option>
+            <option value="mastercard"> Master Card</option>
+            <option value="debitcard">Debit Card</option>
+            <option value="giftcard">Gift Card</option>
+            <option value="pud">Payment Upon Delivery</option>
+        </select><br><br>
+
+        <label for="loyal">Loyal Customer:</label>
+        <input type="checkbox" id="loyal"><br><br>
+
+        <label for="comment">Comment:</label>
+        <!--Text area tags = lets the user input their thoughts in a text box.-->
+        <textarea id="comment" rows="3" cols="25"></textarea><br><br>
+
+        <!--We can choose a file. But, by default, we can select all files.-->
+        <label for="file">File:</label>
+                                 <!--Accept attribute: accepts a specific file type.-->
+        <input type="file" id="file" accept="image/png, image/jpeg"><br><br>
+
+        <input type="Reset">
+        <input type="Submit">
+    </form>
+
+</body>
+</html>
